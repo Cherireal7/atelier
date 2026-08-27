@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@atelier/tokens — preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/tokens.css" />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 3rem clamp(1rem, 4vw, 4rem);
+        background-color: var(--color-canvas);
+        color: var(--color-text);
+        font-family: var(--font-body);
+        font-size: var(--text-body);
+        line-height: var(--text-body--line-height);
+      }
+      header { margin-bottom: 3rem; }
+      h1 {
+        font-family: var(--font-display);
+        font-size: var(--text-display);
+        margin: 0;
+        line-height: 1.05;
+      }
+      p.lead { color: var(--color-text-muted); font-size: var(--text-lead); margin: 0.5rem 0 0; }
+      section { margin-top: 3rem; }
+      h2 {
+        font-family: var(--font-display);
+        font-size: var(--text-headline);
+        margin: 0 0 1.5rem;
+        border-bottom: 1px solid var(--color-gold);
+        padding-bottom: 0.5rem;
+      }
+      .grid { display: grid; gap: 1.25rem; }
+      .palette { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+      .swatch {
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        border: 1px solid rgb(10 10 10 / 0.08);
+        box-shadow: var(--shadow-subtle);
+      }
+      .swatch__chip {
+        height: 110px;
+      }
+      .swatch__meta {
+        padding: 0.75rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-ivory);
+        font-family: var(--font-mono);
+        font-size: var(--text-caption);
+      }
+      .swatch__name { font-weight: 600; }
+      .swatch__hex { color: var(--color-text-muted); }
+      .type-row {
+        display: flex;
+        align-items: baseline;
+        gap: 1.5rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgb(10 10 10 / 0.08);
+      }
+      .type-row__label {
+        min-width: 8rem;
+        font-family: var(--font-mono);
+        font-size: var(--text-caption);
+        color: var(--color-text-muted);
+      }
+      .radii, .shadows {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      }
+      .demo-box {
+        background-color: var(--color-cream);
+        padding: 2rem 1rem;
+        text-align: center;
+        font-family: var(--font-mono);
+        font-size: var(--text-caption);
+        color: var(--color-text-muted);
+      }
+      .demo-box--wine { background-color: var(--color-wine); color: var(--color-ivory); }
+      .demo-box--gold { background-color: var(--color-gold); color: var(--color-ink); }
+      .demo-box--sage { background-color: var(--color-sage); color: var(--color-ink); }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.9rem 2rem;
+        background-color: var(--color-primary);
+        color: var(--color-on-primary);
+        border-radius: var(--radius-md);
+        border: none;
+        font-family: var(--font-body);
+        font-size: var(--text-body);
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color var(--duration-base) var(--ease-out),
+                    transform var(--duration-fast) var(--ease-out);
+        box-shadow: var(--shadow-lift);
+      }
+      .cta:hover { background-color: var(--color-primary-hover); transform: translateY(-1px); }
+
+      footer {
+        margin-top: 4rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--color-gold);
+        color: var(--color-text-muted);
+        font-size: var(--text-caption);
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Etege</h1>
+      <p class="lead">Design tokens preview — palette, typography, radii, shadows, motion.</p>
+    </header>
+
+    <section>
+      <h2>Palette</h2>
+      <div class="grid palette">
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--color-ivory)"></div>
+          <div class="swatch__meta"><span class="swatch__name">ivory</span><span class="swatch__hex">#FBF8F3</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--color-cream)"></div>
+          <div class="swatch__meta"><span class="swatch__name">cream</span><span class="swatch__hex">#F1E9D8</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--color-ink)"></div>
+          <div class="swatch__meta"><span class="swatch__name">ink</span><span class="swatch__hex">#0A0A0A</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--color-muted)"></div>
+          <div class="swatch__meta"><span class="swatch__name">muted</span><span class="swatch__hex">#6B6B6B</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--color-gold)"></div>
+          <div class="swatch__meta"><span class="swatch__name">gold</span><span class="swatch__hex">#C9A55B</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--color-gold-soft)"></div>
+          <div class="swatch__meta"><span class="swatch__name">gold-soft</span><span class="swatch__hex">#E4CFA0</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--color-wine)"></div>
+          <div class="swatch__meta"><span class="swatch__name">wine</span><span class="swatch__hex">#7B2E3C</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--color-wine-deep)"></div>
+          <div class="swatch__meta"><span class="swatch__name">wine-deep</span><span class="swatch__hex">#5A1F2A</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--color-sage)"></div>
+          <div class="swatch__meta"><span class="swatch__name">sage</span><span class="swatch__hex">#97A582</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__chip" style="background: var(--color-sage-soft)"></div>
+          <div class="swatch__meta"><span class="swatch__name">sage-soft</span><span class="swatch__hex">#C4CDB4</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <div class="type-row"><span class="type-row__label">display</span><span style="font-family: var(--font-display); font-size: var(--text-display); line-height: 1.05;">Etege — heritage renewed</span></div>
+      <div class="type-row"><span class="type-row__label">headline</span><span style="font-family: var(--font-display); font-size: var(--text-headline);">The bridal atelier</span></div>
+      <div class="type-row"><span class="type-row__label">title</span><span style="font-family: var(--font-display); font-size: var(--text-title);">Netela — silk with fine tibeb</span></div>
+      <div class="type-row"><span class="type-row__label">lead</span><span style="font-size: var(--text-lead);">Made-to-measure bridal in handwoven Ethiopian cotton, finished in the Addis atelier.</span></div>
+      <div class="type-row"><span class="type-row__label">body</span><span>Sixteen pieces per season. Every gown fitted twice before delivery.</span></div>
+      <div class="type-row"><span class="type-row__label">caption</span><span style="font-size: var(--text-caption); color: var(--color-text-muted);">Shipping from Bole, Addis Ababa · $80–140 diaspora courier</span></div>
+    </section>
+
+    <section>
+      <h2>Radii</h2>
+      <div class="grid radii">
+        <div class="demo-box" style="border-radius: var(--radius-none)">radius-none</div>
+        <div class="demo-box" style="border-radius: var(--radius-sm)">radius-sm</div>
+        <div class="demo-box" style="border-radius: var(--radius-md)">radius-md</div>
+        <div class="demo-box" style="border-radius: var(--radius-lg)">radius-lg</div>
+        <div class="demo-box" style="border-radius: var(--radius-pill)">radius-pill</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Shadows</h2>
+      <div class="grid shadows">
+        <div class="demo-box" style="background: var(--color-ivory); box-shadow: var(--shadow-subtle); border-radius: var(--radius-md);">shadow-subtle</div>
+        <div class="demo-box" style="background: var(--color-ivory); box-shadow: var(--shadow-lift); border-radius: var(--radius-md);">shadow-lift</div>
+        <div class="demo-box" style="background: var(--color-ivory); box-shadow: var(--shadow-hover); border-radius: var(--radius-md);">shadow-hover</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>In situ</h2>
+      <p>The tokens combined into a fitting-reservation CTA — the shape and motion that will drop into every micro frontend.</p>
+      <button class="cta" type="button">
+        Reserve a fitting
+        <span aria-hidden="true">→</span>
+      </button>
+    </section>
+
+    <footer>
+      Preview served straight from packages/tokens/src/tokens.css. Change a value there and reload to see the whole page shift.
+    </footer>
+  </body>
+</html>

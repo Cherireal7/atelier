@@ -1,0 +1,60 @@
+/*
+ * Etege design tokens — plain CSS custom properties only.
+ *
+ * This file is the escape hatch for consumers that DON'T use Tailwind
+ * (e.g. a static HTML email preview, a legacy widget). It duplicates
+ * the values from theme.css so the two stay in lockstep.
+ *
+ * If you're building an app, prefer:
+ *   @import "@atelier/tokens";
+ * That pulls in theme.css which drives Tailwind AND declares these vars.
+ */
+
+:root {
+  --color-ivory: #FBF8F3;
+  --color-cream: #F1E9D8;
+  --color-ink: #0A0A0A;
+  --color-muted: #6B6B6B;
+  --color-gold: #C9A55B;
+  --color-gold-soft: #E4CFA0;
+  --color-wine: #7B2E3C;
+  --color-wine-deep: #5A1F2A;
+  --color-sage: #97A582;
+  --color-sage-soft: #C4CDB4;
+
+  --color-canvas: var(--color-ivory);
+  --color-surface: var(--color-cream);
+  --color-primary: var(--color-wine);
+  --color-primary-hover: var(--color-wine-deep);
+  --color-on-primary: var(--color-ivory);
+  --color-accent: var(--color-gold);
+  --color-text: var(--color-ink);
+  --color-text-muted: var(--color-muted);
+
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, monospace;
+
+  --text-caption: 0.75rem;
+  --text-body: 1rem;
+  --text-lead: 1.125rem;
+  --text-title: 1.5rem;
+  --text-headline: 2.25rem;
+  --text-display: clamp(2.75rem, 6vw, 4.5rem);
+
+  --radius-none: 0;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-pill: 9999px;
+
+  --shadow-subtle: 0 1px 2px rgb(10 10 10 / 0.04);
+  --shadow-lift: 0 8px 24px rgb(10 10 10 / 0.08);
+  --shadow-hover: 0 12px 32px rgb(10 10 10 / 0.12);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 400ms;
+}

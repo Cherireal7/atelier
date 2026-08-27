@@ -1,0 +1,14 @@
+{
+  "name": "@atelier/tokens",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Etege design tokens — colors, typography, radii, shadows. Tailwind v4 @theme + raw CSS custom properties.",
+  "type": "module",
+  "exports": {
+    ".": "./src/theme.css",
+    "./theme.css": "./src/theme.css",
+    "./tokens.css": "./src/tokens.css"
+  },
+  "files": ["src"],
+  "sideEffects": ["*.css"]
+}
