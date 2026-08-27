@@ -1,8 +1,8 @@
 {
-  "name": "etege",
+  "name": "atelier",
   "private": true,
   "version": "0.0.0",
-  "description": "Etege — a frontend system design sandbox built around a premium Ethiopian heritage fashion house. Practice ground for micro frontends, BFF, SSR/SSG/CSR, WebSockets, SSE, Docker + Nginx.",
+  "description": "Atelier — a frontend system design sandbox built around Etege, a premium Ethiopian heritage fashion house. Practice ground for micro frontends, BFF, SSR/SSG/CSR, WebSockets, SSE, Docker + Nginx.",
   "packageManager": "pnpm@11.4.0",
   "engines": {
     "node": ">=20.11.0",

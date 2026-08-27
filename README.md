@@ -1,6 +1,6 @@
-# Etege
+# Atelier
 
-A frontend system design sandbox built around **Etege** — a fictional premium Ethiopian heritage fashion house (bridal + ceremonial). The domain is the excuse; the point is to practice the patterns that senior frontend engineers work with in production:
+A frontend system design sandbox. The product it builds is **Etege** — a fictional premium Ethiopian heritage fashion house (bridal + ceremonial). The brand is the excuse; the point is to practice the patterns that senior frontend engineers work with in production:
 
 - **Micro frontends** with Module Federation (shell + independent remotes)
 - **BFF** (Backend for Frontend) with GraphQL
