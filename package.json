@@ -1,0 +1,24 @@
+{
+  "name": "etege",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Etege — a frontend system design sandbox built around a premium Ethiopian heritage fashion house. Practice ground for micro frontends, BFF, SSR/SSG/CSR, WebSockets, SSE, Docker + Nginx.",
+  "packageManager": "pnpm@11.4.0",
+  "engines": {
+    "node": ">=20.11.0",
+    "pnpm": ">=11.0.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "turbo": "^2.5.4",
+    "typescript": "^5.6.3"
+  }
+}
