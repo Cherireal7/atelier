@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+@import '@atelier/tokens';
+
+/* @source scans the workspace UI package so its class strings survive
+ * Tailwind's dead-code elimination. Path is relative to this file. */
+@source '../../../packages/ui/src/**/*.{ts,tsx}';
+
+/*
+ * Not using next/font here (this is Vite, not Next). Fonts come from the
+ * <link> tag in index.html; the token vars can point at the family names
+ * directly.
+ */
+:root {
+  --font-body-loaded: 'Inter';
+  --font-display-loaded: 'Fraunces';
+  --font-body:
+    var(--font-body-loaded), ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', sans-serif;
+  --font-display:
+    var(--font-display-loaded), ui-serif, Georgia, 'Times New Roman', serif;
+}

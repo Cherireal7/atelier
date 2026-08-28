@@ -11,6 +11,11 @@ const config = {
       source: '/collection/:path*',
       destination: 'http://localhost:4401/collection/:path*',
     },
+    { source: '/cart', destination: 'http://localhost:4402/cart/' },
+    {
+      source: '/cart/:path*',
+      destination: 'http://localhost:4402/cart/:path*',
+    },
   ],
 };
 
