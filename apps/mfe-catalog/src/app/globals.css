@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@import '@atelier/tokens';
+
+@source '../../../../packages/ui/src/**/*.{ts,tsx}';
+
+:root {
+  --font-body:
+    var(--font-body-loaded), ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', sans-serif;
+  --font-display:
+    var(--font-display-loaded), ui-serif, Georgia, 'Times New Roman', serif;
+}

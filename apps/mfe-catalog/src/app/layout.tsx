@@ -19,9 +19,9 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: 'Etege — bridal and ceremonial couture',
+  title: 'Collection — Etege',
   description:
-    'A premium Ethiopian heritage fashion house — bridal and ceremonial, made-to-measure in Addis Ababa.',
+    'Bridal and ceremonial pieces from the Etege atelier, made to measure in Addis Ababa.',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

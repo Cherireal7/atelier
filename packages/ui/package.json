@@ -9,6 +9,7 @@
     "./button": "./src/button/index.ts",
     "./input": "./src/input/index.ts",
     "./card": "./src/card/index.ts",
+    "./nav": "./src/nav/index.ts",
     "./cn": "./src/utils/cn.ts"
   },
   "files": ["src"],
