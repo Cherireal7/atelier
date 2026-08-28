@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+@import '@atelier/tokens';
+
+/*
+ * Tailwind v4 auto-scans this app's own source tree. Workspace packages
+ * live outside it, so tell Tailwind to scan them too — otherwise the
+ * class strings inside @atelier/ui components wouldn't be included in
+ * the generated stylesheet.
+ */
+@source '../../../../packages/ui/src/**/*.{ts,tsx}';
+
+/*
+ * next/font/google injects Fraunces + Inter as CSS variables via the
+ * layout. Point our token vars at those loaded fonts so `font-display`
+ * and `font-body` utilities pick them up.
+ */
+:root {
+  --font-body:
+    var(--font-body-loaded), ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', sans-serif;
+  --font-display:
+    var(--font-display-loaded), ui-serif, Georgia, 'Times New Roman', serif;
+}
